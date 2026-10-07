@@ -29,7 +29,7 @@ export default function Home() {
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const form = useForm<ResumeData>({
-    resolver: zodResolver(ResumeDataSchema),
+    resolver: zodResolver(ResumeDataSchema) as any,
     defaultValues: defaultResumeData,
     mode: "onBlur",
   });
